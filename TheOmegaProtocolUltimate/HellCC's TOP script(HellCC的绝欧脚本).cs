@@ -5,7 +5,8 @@ using KodakkuAssist.Module.GameEvent.Struct;
 using KodakkuAssist.Module.Draw;
 using System.Windows.Forms;
 
-namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate;
+namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
+{
 [ScriptType(name: "HellCC's TOP script(HellCC的绝欧脚本)",
     territorys: [1122],
     guid: "69aab792-24ac-1841-79b1-5e3ac0b3e6ef",
