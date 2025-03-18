@@ -26,13 +26,21 @@ namespace MyScriptNamespace
         Work In progress. 施工中。
         """;
         
-        [UserSetting(note:"This is a test Property")]
-        public int prop1 { get; set; } = 1;
-        [UserSetting("Another Test Property")]
-        public bool prop2 { get; set; } = false;
-
-        [UserSetting("UserColorSetting")]
-        public ScriptColor color { get; set; } = new();
+        [UserSetting("启用文本提示")]
+        public bool Enable_Text_Prompts { get; set; } = true;
+    
+        [UserSetting("文本提示语言")]
+        public Languages_Of_Text_Prompts Language_Of_Text_Prompts { get; set; }
+    
+        [UserSetting("启用开发者模式")]
+        public bool Enable_Developer_Mode { get; set; } = false;
+    
+        public enum Languages_Of_Text_Prompts {
+        
+        Simplified_Chinese_简体中文,
+        English_英文
+        
+        }
 
         [UserSetting("EnumSetting")]
         public TestEnum enumSetting { get; set; }
