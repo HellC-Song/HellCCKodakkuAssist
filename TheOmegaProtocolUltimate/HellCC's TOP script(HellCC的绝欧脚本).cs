@@ -7,12 +7,12 @@ using System.Windows.Forms;
 
 namespace MyScriptNamespace
 {
-    /// <summary>
-    /// name and version affect the script name and version number displayed in the user interface.
-    /// territorys specifies the regions where this trigger is effective. If left empty, it will be effective in all regions.
-    /// Classes with the same GUID will be considered the same trigger. Please ensure your GUID is unique and does not conflict with others.
-    /// </summary>
-    [ScriptType(name: "SimpleScript", territorys: [],guid: "d3b6a9b4-1e0e-4e0c-b7c7-ff1fce0e6cf2",version:"0.0.0.1")]
+    [ScriptType(name: "HellCC's TOP script(HellCC的绝欧脚本)",
+        territorys: [1122],
+        guid: "69aab792-24ac-1841-79b1-5e3ac0b3e6ef",
+        version: "0.0.0.1",
+        note: notesOfTheScript,
+        author: "HellCC")]
     public class SimpleScript
     {
         /// <summary>
