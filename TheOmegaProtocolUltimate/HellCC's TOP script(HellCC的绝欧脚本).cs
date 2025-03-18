@@ -24,7 +24,7 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
         public bool Enable_Text_Prompts { get; set; } = true;
     
         [UserSetting("文本提示语言")]
-        public Languages_Of_Text_Prompts Language_Of_Text_Prompts { get; set; } =  Simplified_Chinese_简体中文;
+        public Languages_Of_Text_Prompts Language_Of_Text_Prompts { get; set; } =  Languages_Of_Text_Prompts.Simplified_Chinese_简体中文;
     
         [UserSetting("启用开发者模式")]
         public bool Enable_Developer_Mode { get; set; } = false;
@@ -71,7 +71,6 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
         {
             n++;
             accessory.Method.SendChat($"{@event["SourceId"]} {n}-th use the Medica II");
-            accessory.Log.Debug($"Prop2 is {prop2}");
             accessory.Log.Debug($"enum is {enumSetting}");
         }
 
@@ -81,7 +80,6 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
             var prop = accessory.Data.GetDefaultDrawProperties();
             prop.Owner = Convert.ToUInt32(@event["SourceId"],16);
             prop.DestoryAt = 2000;
-            prop.Color=color.V4;
             accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, prop);
         }
 
