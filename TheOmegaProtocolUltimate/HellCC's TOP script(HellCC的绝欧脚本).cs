@@ -28,6 +28,9 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
     
         [UserSetting("启用开发者模式")]
         public bool Enable_Developer_Mode { get; set; } = false;
+
+        [UserSetting("UserColorSetting")]
+        public ScriptColor color { get; set; } = new();
     
         public enum Languages_Of_Text_Prompts {
         
@@ -80,7 +83,7 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
             var prop = accessory.Data.GetDefaultDrawProperties();
             prop.Owner = Convert.ToUInt32(@event["SourceId"],16);
             prop.DestoryAt = 2000;
-            prop.Color = System.Drawing.Color.Red;
+            prop.Color=color.V4;
             accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, prop);
         }
 
