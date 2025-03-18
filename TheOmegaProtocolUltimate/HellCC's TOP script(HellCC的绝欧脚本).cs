@@ -5,32 +5,26 @@ using KodakkuAssist.Module.GameEvent.Struct;
 using KodakkuAssist.Module.Draw;
 using System.Windows.Forms;
 
-namespace MyScriptNamespace
-{
-    [ScriptType(name: "HellCC's TOP script(HellCC的绝欧脚本)",
-        territorys: [1122],
-        guid: "69aab792-24ac-1841-79b1-5e3ac0b3e6ef",
-        version: "0.0.0.2",
-        note: notesOfTheScript,
-        author: "HellCC")]
-    public class SimpleScript
+namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate;
+[ScriptType(name: "HellCC's TOP script(HellCC的绝欧脚本)",
+    territorys: [1122],
+    guid: "69aab792-24ac-1841-79b1-5e3ac0b3e6ef",
+    version: "0.0.0.2",
+    note: notesOfTheScript,
+    author: "HellCC")]
+public class The_Omega_Protocol
     {
         /// <summary>
         /// note will be displayed to the user as a tooltip.
         /// </summary>
 
-        const string notesOfTheScript =
-        """
-        ***** Please read the note here carefully before running the script! *****
-        ***** 请在使用此脚本前仔细阅读此处的说明! *****
-        Work In progress. 施工中。
-        """;
+        const string notesOfTheScript = "Work in Progress. 施工中";
         
         [UserSetting("启用文本提示")]
         public bool Enable_Text_Prompts { get; set; } = true;
     
         [UserSetting("文本提示语言")]
-        public Languages_Of_Text_Prompts Language_Of_Text_Prompts { get; set; }
+        public Languages_Of_Text_Prompts Language_Of_Text_Prompts { get; set; } =  Simplified_Chinese_简体中文;
     
         [UserSetting("启用开发者模式")]
         public bool Enable_Developer_Mode { get; set; } = false;
