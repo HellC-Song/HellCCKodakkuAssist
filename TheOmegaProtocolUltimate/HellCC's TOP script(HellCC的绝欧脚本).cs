@@ -14,7 +14,7 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
         note: notesOfTheScript,
         author: "HellCC")
     ]
-public class The_Omega_Protocol
+    public class The_Omega_Protocol
     {
         /// <summary>
         /// note will be displayed to the user as a tooltip.
