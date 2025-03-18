@@ -29,7 +29,7 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
         [UserSetting("启用开发者模式")]
         public bool Enable_Developer_Mode { get; set; } = false;
 
-        [UserSetting("UserColorSetting")]
+        [UserSetting("绘图颜色")]
         public ScriptColor color { get; set; } = new();
     
         public enum Languages_Of_Text_Prompts {
@@ -74,7 +74,6 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
         {
             n++;
             accessory.Method.SendChat($"{@event["SourceId"]} {n}-th use the Medica II");
-            accessory.Log.Debug($"enum is {enumSetting}");
         }
 
         [ScriptMethod(name: "Test Draw", eventType: EventTypeEnum.ActionEffect,eventCondition: ["ActionId:124"])]
