@@ -18,6 +18,14 @@ namespace MyScriptNamespace
         /// <summary>
         /// note will be displayed to the user as a tooltip.
         /// </summary>
+
+        const string notesOfTheScript =
+        """
+        ***** Please read the note here carefully before running the script! *****
+        ***** 请在使用此脚本前仔细阅读此处的说明! *****
+        Work In progress. 施工中。
+        """;
+        
         [UserSetting(note:"This is a test Property")]
         public int prop1 { get; set; } = 1;
         [UserSetting("Another Test Property")]
