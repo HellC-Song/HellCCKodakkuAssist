@@ -11,7 +11,7 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
         territorys: [1122],
         guid: "69aab792-24ac-1841-79b1-5e3ac0b3e6ef",
         version: "0.0.0.2",
-        note: notesOfTheScript,
+        note: "Work in Progress. 施工中",
         author: "HellCC")
     ]
     public class The_Omega_Protocol
@@ -19,8 +19,6 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
         /// <summary>
         /// note will be displayed to the user as a tooltip.
         /// </summary>
-
-        const string notesOfTheScript = "Work in Progress. 施工中";
         
         [UserSetting("启用文本提示")]
         public bool Enable_Text_Prompts { get; set; } = true;
