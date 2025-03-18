@@ -80,6 +80,7 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
             var prop = accessory.Data.GetDefaultDrawProperties();
             prop.Owner = Convert.ToUInt32(@event["SourceId"],16);
             prop.DestoryAt = 2000;
+            prop.Color = System.Drawing.Color.Red;
             accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, prop);
         }
 
