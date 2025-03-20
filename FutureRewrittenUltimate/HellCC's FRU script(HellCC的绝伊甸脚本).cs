@@ -5,16 +5,16 @@ using KodakkuAssist.Module.GameEvent.Struct;
 using KodakkuAssist.Module.Draw;
 using System.Windows.Forms;
 
-namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
+namespace HellCCKodakkuAssist.FutureRewrittenUltimate
 {
-    [ScriptType(name: "HellCC's TOP script(HellCC的绝欧脚本)",
+    [ScriptType(name: "HellCC's FRU script(HellCC的绝伊甸脚本)",
         territorys: [1238],
-        guid: "69aab792-24ac-1841-79b1-5e3ac0b3e6ef",
-        version: "0.0.0.2",
+        guid: "e8f65bb5-5c4c-405c-8735-c1b637eb852c",
+        version: "0.0.0.1",
         note: "Work in Progress. 施工中",
         author: "HellCC")
     ]
-    public class The_Omega_Protocol
+    public class Future_Rewritten_Ultimate
     {
         /// <summary>
         /// note will be displayed to the user as a tooltip.
@@ -56,6 +56,8 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
         public void Init(ScriptAccessory accessory)
         {
             n = 0;
+            double parse = 1d;
+            List<int> P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
         }
 
         /// <summary>
@@ -91,7 +93,35 @@ namespace HellCCKodakkuAssist.TheOmegaProtocolUltimate
         {
             accessory.Log.Debug($"The unconfigurable method has been triggered.");
         }
+        [ScriptMethod(name: "P1_转轮召_抓人", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:4165"], userControl: false)]
+        public void P1_转轮召_抓人(Event @event, ScriptAccessory accessory)
+        {
+            if (parse != 1d) return;
+            if (!ParseObjectId(@event["TargetId"], out var tid)) return;
+            lock (this)
+            {
+                P1转轮召抓人[accessory.Data.PartyList.IndexOf(((uint)tid))] = 1;
+            }
+        }
 
-
+         [ScriptMethod(name: "Phase1 Stack Range Of Turn Of The Heavens 光轮召唤分摊标记",
+            eventType: EventTypeEnum.StartCasting,
+            eventCondition: ["ActionId:regex:^(40152)$"])]
+        public void Phase1_Stack_Range_Of_Turn_Of_The_Heavens_光轮召唤分摊标记(Event @event, ScriptAccessory accessory)
+        {
+            int highPriorityTarget = P1转轮召抓人.IndexOf(1);
+            int lowPriorityTarget = P1转轮召抓人.LastIndexOf(1);
+            accessory.Method.MarkClear();
+            if(highPriorityTarget > 3){
+                accessory.Method.Mark(accessory.Data.PartyList[0], MarkType.Stop1);
+                accessory.Method.Mark(accessory.Data.PartyList[highPriorityTarget], MarkType.Stop2);
+            }
+            else{
+                if(lowPriorityTarget < 4){
+                    accessory.Method.Mark(accessory.Data.PartyList[4], MarkType.Stop1);
+                    accessory.Method.Mark(accessory.Data.PartyList[lowPriorityTarget], MarkType.Stop2);
+                }
+            }
+        }
     }
 }
