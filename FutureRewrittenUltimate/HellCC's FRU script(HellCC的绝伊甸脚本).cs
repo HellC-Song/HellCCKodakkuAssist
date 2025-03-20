@@ -43,6 +43,7 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
         public TestEnum enumSetting { get; set; }
         int n = 0;
         double parse;
+        List<int> P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
 
 
         public enum TestEnum
@@ -58,7 +59,7 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
         {
             n = 0;
             parse = 1d;
-            List<int> P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
+            P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
         }
 
         /// <summary>
