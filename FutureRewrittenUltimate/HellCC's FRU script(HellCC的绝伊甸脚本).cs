@@ -14,6 +14,7 @@ using ECommons.MathHelpers;
 using KodakkuAssist.Module.GameOperate;
 using HellCCKodakkuAssist.FutureRewrittenUltimate;
 using Newtonsoft.Json;
+using System.Linq;
 
 namespace HellCCKodakkuAssist.FutureRewrittenUltimate
 {
