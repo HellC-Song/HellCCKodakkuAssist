@@ -75,7 +75,7 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
             if (!ParseObjectId(@event["TargetId"], out var tid)) return;
             lock (this)
             {
-                P1转轮召抓人[accessory.Data.PartyList.IndexOf((uint)tid)] = 1;
+                P1转轮召抓人[accessory.Data.PartyList.IndexOf(tid)] = 1;
             }
         }
 
