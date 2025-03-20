@@ -17,6 +17,7 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
     ]
     public class Future_Rewritten_Ultimate
     {
+        /*
         private double parse = 0;
         private List<int> P1转轮召抓人 = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0 };
         public void Init(ScriptAccessory accessory)
@@ -54,5 +55,6 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
                 }
             }
         }
+        /*
     }
 }
