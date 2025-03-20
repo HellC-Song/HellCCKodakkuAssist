@@ -59,8 +59,8 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
             Second
         }
         
-        private double parse = 0;
-        private List<int> P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
+        double parse = 0;
+        List<int> P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
         public void Init(ScriptAccessory accessory)
         {
             parse = 1d;
