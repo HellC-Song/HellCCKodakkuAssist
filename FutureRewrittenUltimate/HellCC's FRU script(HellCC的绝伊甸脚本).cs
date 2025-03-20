@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Concurrent;
+using System.Buffers;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
