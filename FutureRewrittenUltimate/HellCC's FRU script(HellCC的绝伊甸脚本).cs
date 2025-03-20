@@ -41,13 +41,12 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
         
         private double parse = 0;
         private List<int> P1转轮召抓人 = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0 };
-
+        /*
         public void Init(ScriptAccessory accessory)
         {
             parse = 1d;
             P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
         }
-        /*
         [ScriptMethod(name: "P1_转轮召_抓人", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:4165"], userControl: false)]
         public void P1_转轮召_抓人(Event @event, ScriptAccessory accessory)
         {
