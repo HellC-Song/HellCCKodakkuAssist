@@ -58,10 +58,10 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
             }
         }
 
-         [ScriptMethod(name: "Phase1 Stack Range Of Turn Of The Heavens 光轮召唤分摊标记",
+        """[ScriptMethod(name: "Phase1 Stack Range Of Turn Of The Heavens 光轮召唤分摊标记",
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:regex:^(40152)$"])]
-        """public void Phase1_Stack_Range_Of_Turn_Of_The_Heavens_光轮召唤分摊标记(Event @event, ScriptAccessory accessory)
+        public void Phase1_Stack_Range_Of_Turn_Of_The_Heavens_光轮召唤分摊标记(Event @event, ScriptAccessory accessory)
         {
             int highPriorityTarget = P1转轮召抓人.IndexOf(1);
             int lowPriorityTarget = P1转轮召抓人.LastIndexOf(1);
