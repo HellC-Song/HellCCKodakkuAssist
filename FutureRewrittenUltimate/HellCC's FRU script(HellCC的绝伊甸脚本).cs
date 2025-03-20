@@ -41,9 +41,8 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
 
         [UserSetting("EnumSetting")]
         public TestEnum enumSetting { get; set; }
-        private int n = 0;
         private double parse = 0;
-        private List<int> P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
+        private List<int> P1转轮召抓人 = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0 };
 
 
         public enum TestEnum
@@ -57,43 +56,8 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
         /// </summary>
         public void Init(ScriptAccessory accessory)
         {
-            n = 0;
             parse = 1d;
             P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
-        }
-
-        /// <summary>
-        /// name is the name of the method as presented to the user.
-        /// eventType is the type of event that triggers this method.
-        /// eventCondition is an array of strings specifying the properties that the event must have,
-        /// in the format name:value,For specific details, please refer to the GameEvent of the plugin.
-        /// userControl set to false will make the method not be shown to the user
-        /// and cannot be disabled by the user.
-        /// Please note, the method will be executed asynchronously.
-        /// </summary>
-        /// <param name="event">The event instance that triggers this method.</param>
-        /// <param name="accessory">Pass the instances of methods and data that might be needed.</param>
-        [ScriptMethod(name: "Test StartCasting",eventType: EventTypeEnum.StartCasting,eventCondition: ["ActionId:133"])]
-        public void PrintInfo(Event @event, ScriptAccessory accessory)
-        {
-            n++;
-            accessory.Method.SendChat($"{@event["SourceId"]} {n}-th use the Medica II");
-        }
-
-        [ScriptMethod(name: "Test Draw", eventType: EventTypeEnum.ActionEffect,eventCondition: ["ActionId:124"])]
-        public void DrawCircle(Event @event, ScriptAccessory accessory)
-        {
-            var prop = accessory.Data.GetDefaultDrawProperties();
-            prop.Owner = Convert.ToUInt32(@event["SourceId"],16);
-            prop.DestoryAt = 2000;
-            prop.Color=color.V4;
-            accessory.Method.SendDraw(DrawModeEnum.Default, DrawTypeEnum.Circle, prop);
-        }
-
-        [ScriptMethod(name: "Unconfigurable Method", eventType: EventTypeEnum.ActionEffect,eventCondition: ["ActionId:124"],userControl:false)]
-        public void UnconfigurableMethod(Event @event, ScriptAccessory accessory)
-        {
-            accessory.Log.Debug($"The unconfigurable method has been triggered.");
         }
         [ScriptMethod(name: "P1_转轮召_抓人", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:4165"], userControl: false)]
         public void P1_转轮召_抓人(Event @event, ScriptAccessory accessory)
