@@ -3,6 +3,7 @@ using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
 using KodakkuAssist.Module.Draw;
+using HellCCKodakkuAssist.FuturesRewrittenUltimate;
 using System.Windows.Forms;
 
 namespace HellCCKodakkuAssist.FutureRewrittenUltimate
