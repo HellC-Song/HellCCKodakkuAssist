@@ -13,6 +13,7 @@ using Dalamud.Utility.Numerics;
 using ECommons.MathHelpers;
 using KodakkuAssist.Module.GameOperate;
 using HellCCKodakkuAssist.FutureRewrittenUltimate;
+using Newtonsoft.Json;
 
 namespace HellCCKodakkuAssist.FutureRewrittenUltimate
 {
