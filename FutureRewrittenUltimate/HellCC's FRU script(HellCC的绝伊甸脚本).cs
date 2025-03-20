@@ -41,9 +41,9 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
 
         [UserSetting("EnumSetting")]
         public TestEnum enumSetting { get; set; }
-        int n = 0;
-        double parse = 0;
-        List<int> P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
+        private int n = 0;
+        private double parse = 0;
+        private List<int> P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
 
 
         public enum TestEnum
