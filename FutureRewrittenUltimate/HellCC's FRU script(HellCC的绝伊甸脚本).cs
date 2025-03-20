@@ -16,28 +16,6 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
     ]
     public class Future_Rewritten_Ultimate
     {
-        /// <summary>
-        /// note will be displayed to the user as a tooltip.
-        /// </summary>
-        
-        [UserSetting("启用文本提示")]
-        public bool Enable_Text_Prompts { get; set; } = true;
-    
-        [UserSetting("文本提示语言")]
-        public Languages_Of_Text_Prompts Language_Of_Text_Prompts { get; set; } =  Languages_Of_Text_Prompts.Simplified_Chinese_简体中文;
-    
-        [UserSetting("启用开发者模式")]
-        public bool Enable_Developer_Mode { get; set; } = false;
-
-        [UserSetting("绘图颜色")]
-        public ScriptColor color { get; set; } = new();
-    
-        public enum Languages_Of_Text_Prompts {
-        
-        Simplified_Chinese_简体中文,
-        English_英文
-        
-        }
         /*
         private double parse = 0;
         private List<int> P1转轮召抓人 = new List<int> { 0, 0, 0, 0, 0, 0, 0, 0 };
