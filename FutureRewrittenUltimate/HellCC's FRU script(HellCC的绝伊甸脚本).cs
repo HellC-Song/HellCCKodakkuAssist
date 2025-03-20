@@ -1,25 +1,9 @@
-﻿using System;
-using System.Collections.Concurrent;
+using System;
 using KodakkuAssist.Module.GameEvent;
 using KodakkuAssist.Script;
 using KodakkuAssist.Module.GameEvent.Struct;
 using KodakkuAssist.Module.Draw;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using ECommons;
-using System.Numerics;
-using Newtonsoft.Json;
-using System.Linq;
-using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
-// using System.DirectoryServices;
-using System.Xml.Linq;
-using CicerosKodakkuAssist.FuturesRewrittenUltimate;
-using Dalamud.Game.ClientState.Objects.Types;
-using Dalamud.Utility.Numerics;
-using ECommons.MathHelpers;
-using KodakkuAssist.Module.GameOperate;
-using Newtonsoft.Json.Linq;
+using System.Windows.Forms;
 
 namespace HellCCKodakkuAssist.FutureRewrittenUltimate
 {
