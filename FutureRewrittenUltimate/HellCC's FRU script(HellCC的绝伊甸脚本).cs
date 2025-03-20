@@ -47,7 +47,6 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
             parse = 1d;
             P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
         }
-        """
         [ScriptMethod(name: "P1_转轮召_抓人", eventType: EventTypeEnum.StatusAdd, eventCondition: ["StatusID:4165"], userControl: false)]
         public void P1_转轮召_抓人(Event @event, ScriptAccessory accessory)
         {
@@ -59,7 +58,7 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
             }
         }
 
-        [ScriptMethod(name: "Phase1 Stack Range Of Turn Of The Heavens 光轮召唤分摊标记",
+        /*[ScriptMethod(name: "Phase1 Stack Range Of Turn Of The Heavens 光轮召唤分摊标记",
             eventType: EventTypeEnum.StartCasting,
             eventCondition: ["ActionId:regex:^(40152)$"])]
         public void Phase1_Stack_Range_Of_Turn_Of_The_Heavens_光轮召唤分摊标记(Event @event, ScriptAccessory accessory)
@@ -78,6 +77,6 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
                 }
             }
         }
-        """
+        */
     }
 }
