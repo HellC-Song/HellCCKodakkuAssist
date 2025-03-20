@@ -69,7 +69,7 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
         public void P1_转轮召_抓人(Event @event, ScriptAccessory accessory)
         {
             if (parse != 1d) return;
-            if (!parseObjectId(@event["TargetId"], out var tid)) return;
+            if (!ParseObjectId(@event["TargetId"], out var tid)) return;
             lock (this)
             {
                 P1转轮召抓人[accessory.Data.PartyList.IndexOf(((uint)tid))] = 1;
@@ -93,6 +93,21 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
                     accessory.Method.Mark(accessory.Data.PartyList[4], MarkType.Stop1);
                     accessory.Method.Mark(accessory.Data.PartyList[lowPriorityTarget], MarkType.Stop2);
                 }
+            }
+        }
+        private static bool ParseObjectId(string? idStr, out ulong id)
+        {
+            id = 0;
+            if (string.IsNullOrEmpty(idStr)) return false;
+            try
+            {
+                var idStr2 = idStr.Replace("0x", "");
+                id = ulong.Parse(idStr2, System.Globalization.NumberStyles.HexNumber);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
     }
