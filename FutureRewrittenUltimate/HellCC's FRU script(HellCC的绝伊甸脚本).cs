@@ -42,6 +42,7 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
         [UserSetting("EnumSetting")]
         public TestEnum enumSetting { get; set; }
         int n = 0;
+        double parse;
 
 
         public enum TestEnum
@@ -56,7 +57,7 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
         public void Init(ScriptAccessory accessory)
         {
             n = 0;
-            double parse = 1d;
+            parse = 1d;
             List<int> P1转轮召抓人 = [0, 0, 0, 0, 0, 0, 0, 0];
         }
 
