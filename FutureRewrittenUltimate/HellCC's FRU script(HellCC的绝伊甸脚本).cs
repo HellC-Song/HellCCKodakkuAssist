@@ -69,7 +69,7 @@ namespace HellCCKodakkuAssist.FutureRewrittenUltimate
         public void P1_转轮召_抓人(Event @event, ScriptAccessory accessory)
         {
             if (parse != 1d) return;
-            if (!ParseObjectId(@event["TargetId"], out var tid)) return;
+            if (!parseObjectId(@event["TargetId"], out var tid)) return;
             lock (this)
             {
                 P1转轮召抓人[accessory.Data.PartyList.IndexOf(((uint)tid))] = 1;
